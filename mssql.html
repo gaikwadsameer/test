@@ -38,3 +38,10 @@ GO
 ALTER TABLE [dbo].[A_AuthorizationLogs]  WITH CHECK ADD FOREIGN KEY([UserId])
 REFERENCES [dbo].[Users] ([UserID])
 GO
+
+CREATE TABLE [dbo].[Users_type](
+	[UserID] [int] IDENTITY(1,1) NOT NULL,
+	[Username] [nvarchar](50) NOT NULL,
+	[Password] [nvarchar](50) NOT NULL,
+	[UserType] [nvarchar](20) NOT NULL,
+)
